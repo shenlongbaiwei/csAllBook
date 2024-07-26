@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>动态规划 - DaveLyCsAllBook</title>
+        <title>boost和jsoncpp库安装 - DaveLyCsAllBook</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -38,16 +38,16 @@
                                 <a href="../.." class="nav-link">首页</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">算法</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">算法</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">动态规划</a>
+    <a href="../../%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="dropdown-item">动态规划</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">c++</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">c++</a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
@@ -55,7 +55,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="dropdown-item">boost和jsoncpp库安装</a>
+    <a href="./" class="dropdown-item active" aria-current="page">boost和jsoncpp库安装</a>
 </li>
     </ul>
   </li>
@@ -70,12 +70,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../.." class="nav-link">
+                                <a rel="prev" href="../../%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -97,17 +97,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">动态规划合集</a>
+            <li class="nav-item" data-bs-level="1"><a href="#cboostjson" class="nav-link">c++的boost库和相关的json数据解析库</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">斐波那契数列</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">爬楼梯</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">下载完毕后，进行相关的解压和编译。</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">爬楼梯的最小花费</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">编译完成后</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#jsoncpp" class="nav-link">编译jsoncpp库</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">项目属性配置测试</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -118,94 +122,82 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">动态规划合集</h1>
-<blockquote>
-<p>本合集所有题目均来自leetcode，相关解法是对代码随想录carl老师思路的个人总结和提炼，仅用于学习途径。</p>
-</blockquote>
-<p>递归五公式：</p>
-<p>1、确定dp数组含义及其下标含义</p>
-<p>2、确定dp数组递推公式</p>
-<p>2、初始化dp数组</p>
-<p>3、确定遍历顺序</p>
-<p>4、举例进行推导dp数组</p>
-<h2 id="_2">斐波那契数列</h2>
-<p>题目要求很简单，无需多言。</p>
-<p>1、dp数组表示对应元素大小</p>
-<p>2、递推公式:dp[i]=dp[i-1]+dp[i-2];</p>
-<p>3、初始化dp数组：dp[0]=0,dp[1]=1;</p>
-<p>4、确定遍历顺序：很明显是从前往后进行遍历，从0,1-》2，3.。。</p>
-<p>5、直接进行遍历推导呗</p>
-<p>代码：</p>
-<pre><code class="language-c++">int fib(int n){
-    if(n&lt;=1) return n;
-    int dp[2];
-    dp[0]=0;
-    dp[1]=1;
-    for(int i=2;i&lt;=n;i++){
-        int sum=dp[0]+dp[1];
-        dp[0]=dp[1];
-        dp[1]=sum;
-}
-    return dp[1];
+<h1 id="cboostjson">c++的boost库和相关的json数据解析库</h1>
+<p>我主要是学习了如何安装boost库，可以去boost官网去下载，下载地址为：</p>
+<p><a href="https://www.boost.org/">boost官网</a></p>
+<p>首先进入官网下载对应的boost库文件，点击主页面的download按钮即可进行下载，</p>
+<p><img alt="Snipaste_2024-07-26_22-51-11" src="../imgs/Snipaste_2024-07-26_22-51-11.png" /></p>
+<p>然后点击进入相关下载页面，</p>
+<p><img alt="Snipaste_2024-07-26_23-00-47" src="../imgs/Snipaste_2024-07-26_23-00-47.png" /></p>
+<p>之后就是直接进行相关下载。</p>
+<h2 id="_1">下载完毕后，进行相关的解压和编译。</h2>
+<p>在这一步可能会没有b2.exe。</p>
+<p><img alt="Snipaste_2024-07-26_23-02-24" src="../imgs/Snipaste_2024-07-26_23-02-24.png" /></p>
+<p>但是我们可以先双击boosttrap.bat这个可执行脚本文件。</p>
+<p>之后就会生成b2.exe。</p>
+<p>然后在这个目录下进入windows的powershell界面。</p>
+<p>执行相关的编译命令，然后就可以直接进行编译了。</p>
+<p>等待编译完成即可。</p>
+<h2 id="_2">编译完成后</h2>
+<p>在vs2019，新建一个控制台项目，在控制台项目中，将项目属性的包含目录和库目录分别进行编辑添加，然后自行在网络上找一个，或者ai生成一个简单的测试样例，进行测试，注意你可以自行选择编译x86,x64等版本。</p>
+<p>测试无误之后就可以使用boost库了。</p>
+<h2 id="jsoncpp">编译jsoncpp库</h2>
+<p><a href="https://github.com/open-source-parsers/jsoncpp">jsoncpp下载</a></p>
+<p><a href="http://jsoncpp.sourceforge.net/old.html">官方文档</a></p>
+<p>选择windows版本的下载。</p>
+<p>之后进行解压，执行相关的sln文件。</p>
+<p><img alt="Snipaste_2024-07-26_23-09-04" src="../imgs/Snipaste_2024-07-26_23-09-04.png" /></p>
+<p>如果出现需要升级直接进行升级即可。</p>
+<p>之后就等待，然后进入相关的vs2019，直接进行lib_json的重新生成，注意要自行选择x86,x64版本的debug,release进行生成。</p>
+<p>之后就算生成成功了。</p>
+<h2 id="_3">项目属性配置测试</h2>
+<p>在项目属性中，vc++包含目录设置为</p>
+<p><img alt="image-20240726231247196" src="../imgs/image-20240726231247196.png" /></p>
+<p>然后将刚生成的两个静态库复制到单独文件夹，将库目录进行编写选择即可。</p>
+<p>之后进行相关的代码测试，一样的，可以直接让ai生成一段即可。</p>
+<p>为了测试JSONCPP库是否已正确安装在你的C++环境中，你可以编写一个简单的C++程序，该程序使用JSONCPP来解析一个JSON字符串，并打印出其中的一些内容。以下是一个简单的示例代码，用于演示如何做到这一点：</p>
+<p>首先，确保你已经按照JSONCPP库的说明文档安装了库，并且在编译你的程序时链接了JSONCPP库。</p>
+<p>接下来是示例代码：</p>
+<pre><code>cpp
+#include &lt;iostream&gt;  
+#include &lt;json/json.h&gt; // 引入JSONCPP的头文件  
 
+int main() {  
+    // 定义一个JSON字符串  
+    std::string err;  
+    std::string json_str = R&quot;({&quot;name&quot;: &quot;John Doe&quot;, &quot;age&quot;: 30, &quot;city&quot;: &quot;New York&quot;})&quot;;  
+
+    // 解析JSON字符串  
+    Json::Reader reader;  
+    Json::Value root;  
+    bool parsingSuccessful = reader.parse(json_str, root, false, err);  
+
+    if (!parsingSuccessful) {  
+        std::cerr &lt;&lt; &quot;Failed to parse JSON string: &quot; &lt;&lt; err &lt;&lt; std::endl;  
+        return 1;  
+    }  
+
+    // 访问并打印JSON数据  
+    std::string name = root[&quot;name&quot;].asString();  
+    int age = root[&quot;age&quot;].asInt();  
+    std::string city = root[&quot;city&quot;].asString();  
+
+    std::cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; std::endl;  
+    std::cout &lt;&lt; &quot;Age: &quot; &lt;&lt; age &lt;&lt; std::endl;  
+    std::cout &lt;&lt; &quot;City: &quot; &lt;&lt; city &lt;&lt; std::endl;  
+
+    return 0;  
 }
+
 </code></pre>
-<p>ending!!!!!!!!!!!!</p>
-<h2 id="_3">爬楼梯</h2>
-<p>思路：</p>
-<p>爬楼梯问题，其实就是初始dp数组，然后dp数组的递推公式如下：</p>
-<p>dp[i]=dp[i-1]+dp[i-2];</p>
-<p>递推顺序：很明显从前往后。</p>
-<p>然后就是for循环进行递推遍历咯。</p>
-<p>代码：</p>
-<pre><code class="language-c++">int climbStairs(int n) {
-        if(n&lt;=1) return n;
-        int dp[3];
-        dp[1]=1;
-        dp[2]=2;
-        for(int i=3;i&lt;=n;i++){
-            int sum=dp[1]+dp[2];
-            dp[1]=dp[2];
-            dp[2]=sum;
-        }
-        return dp[2];
-    }
+<p>请注意，这个示例使用了C++11的原始字符串字面量（R"(...)"）来避免在JSON字符串中使用转义字符。如果你使用的是不支持C++11或更高版本的编译器，你需要将JSON字符串中的双引号替换为转义的双引号（\"）。</p>
+<p>要编译这个程序，你需要将JSONCPP库包含在你的编译器的包含路径（include path）中，并确保链接器可以找到JSONCPP的库文件。编译命令的具体形式将取决于你的操作系统、编译器以及JSONCPP的安装方式。</p>
+<p>例如，如果你使用的是g++编译器和Linux系统，并且JSONCPP库已经安装在标准位置，你的编译命令可能看起来像这样：</p>
+<pre><code>bash
+g++ -o test_jsoncpp test_jsoncpp.cpp -ljsoncpp
 </code></pre>
-<p>总结：</p>
-<p>以上就是相关爬楼梯问题的解法，其实这个方法思路也可以应用到，爬一层楼一次一步，，一次两步，一次三步，一直往下举个例子。这种也都能进行动态规划。</p>
-<pre><code class="language-c++">class Solution {
-public:
-    int climbStairs(int n) {
-        vector&lt;int&gt; dp(n + 1, 0);
-        dp[0] = 1;
-        for (int i = 1; i &lt;= n; i++) {
-            for (int j = 1; j &lt;= m; j++) { // 把m换成2，就可以AC爬楼梯这道题
-                if (i - j &gt;= 0) dp[i] += dp[i - j];
-            }
-        }
-        return dp[n];
-    }
-};
-</code></pre>
-<h2 id="_4">爬楼梯的最小花费</h2>
-<p>思路：其实主要就是对于动归数组的定义和相关递推公式的研究，以及关键的爬楼梯时的第一、二步的花费相关的问题。</p>
-<p>这里：dp[i]=min(dp[i-1]+cost[i-1],dp[i-2]+cost[i-2]);</p>
-<p>同时，在题目要求中，所写的初始在第0层的时候可以不花费，或者直接从第一楼开始也行，所以这两层楼都不花费，同时，由这两层楼可以推导出后续所有楼的最小花费。同时，递推顺序，很明显是从前往后，所以这里就直接for循环即可，但是在遇到比如背包问题的时候，我们需要重新考虑，因为背包问题需要两个for循环，因此在考虑循环的时候要重点关注for循环的遍历顺序。但是在本题中无需过多关注该问题。</p>
-<p>代码展示：</p>
-<pre><code class="language-c++">int minCostClimbingStairs(vector&lt;int&gt;&amp; cost) {
-        //if(cost.size()&lt;=1) return cost[0];
-        int dp0=0;
-        int dp1=0;
-        for(int i=2;i&lt;=cost.size();i++){
-            int sum=min(dp0+cost[i-2],dp1+cost[i-1]);
-            dp0=dp1;
-            dp1=sum;
-        }
-        return dp1;
-    }
-};
-</code></pre>
-<p>总结，总体上该问题是对前面爬楼梯问题的一个延续和变形，因此我们在计算的时候，需要进一步考虑每层楼的最小花费，因此需要用到min函数，同时我们可以根据相关条件，进行相关操作。</p></div>
+<p>这个命令会编译test_jsoncpp.cpp（你的源代码文件名），链接JSONCPP库，并生成一个名为test_jsoncpp的可执行文件。运行这个可执行文件将打印出解析的JSON数据。</p>
+<p>如果你看到输出中包含Name: John Doe、Age: 30和City: New York，那么恭喜你，JSONCPP库已经成功安装并可以在你的C++项目中使用了！</p></div>
             </div>
         </div>
 
