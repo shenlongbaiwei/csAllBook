@@ -463,6 +463,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态规划-不同路径2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -558,6 +567,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态规划-不同路径2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -609,6 +627,50 @@
 <p>其余位置进行两层for循环，嵌套运行即可。</p>
 <h5 id="ending">ending！！<a class="headerlink" href="#ending" title="Permanent link">&para;</a></h5>
 <p><img alt="1" src="../imgs/1.jpg" /></p>
+<h2 id="-2">动态规划-不同路径2<a class="headerlink" href="#-2" title="Permanent link">&para;</a></h2>
+<p>题目来源：</p>
+<p><a href="https://leetcode.cn/problems/unique-paths-ii/">https://leetcode.cn/problems/unique-paths-ii/</a></p>
+<p>题目答案代码：</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">uniquePathsWithObstacles</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">obstacleGrid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="o">=</span><span class="n">obstacleGrid</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="n">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obstacleGrid</span><span class="p">[</span><span class="n">m</span><span class="mi">-1</span><span class="p">][</span><span class="n">n</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">//如果在起点或终点出现了障碍，直接返回0</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos=" 7 "></span></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><a href="#__codelineno-1-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="o">&amp;&amp;</span><span class="n">obstacleGrid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><a href="#__codelineno-1-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o">&amp;&amp;</span><span class="n">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><a href="#__codelineno-1-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><a href="#__codelineno-1-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><a href="#__codelineno-1-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obstacleGrid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><a href="#__codelineno-1-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">                    </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="mi">-1</span><span class="p">];</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><a href="#__codelineno-1-14"><span class="linenos" data-linenos="14 "></span></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><a href="#__codelineno-1-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><a href="#__codelineno-1-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><a href="#__codelineno-1-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="mi">-1</span><span class="p">][</span><span class="n">n</span><span class="mi">-1</span><span class="p">];</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><a href="#__codelineno-1-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h4 id="_2">题目描述：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>该题目与前面一个题目的区别在于，该题的网格路径上出现了障碍物。</p>
+<p>因此需要对障碍物进行特殊处理。</p>
+<p>在障碍物的位置的dp数组的值肯定为0，因为障碍物会影响它旁边的格子的路径。</p>
+<p>因此需要考虑三种情况：</p>
+<p><img alt="Snipaste_2024-07-29_11-06-06" src="../imgs/Snipaste_2024-07-29_11-06-06.png" /></p>
+<p>以上就是本题在进行动态规划之前需要进行考虑的dp数组推导公式。</p>
+<h4 id="_3">初始化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>初始化，直接初始化为所有格子为0即可，后续需要更改进行对应更改即可，而且0可以省去上面的一些情况的赋值过程。</p>
+<h4 id="_4">推导顺序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>把上述三种情况进行模拟即可。</p>
+<p>第三种情况在代码实现的过程中，可以直接整合为一句代码，上述分为三种主要是方便读者考虑全面。</p>
+<p><code>if (obstacleGrid[i][j] == 0) dp[i][j]=dp[i-1][j]+dp[i][j-1];</code></p>
+<h4 id="_5">后续<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>后续就是一些代码的实现和相关循环即可。</p>
+<p>节省内存空间的代码展示，主要是取自代码随想录的carl老师的代码，有需要可以自行前往查看。</p>
+<p><a href="https://programmercarl.com/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.html#%E6%80%9D%E8%B7%AF">不同路径2</a></p>
+<h4 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>在实现的过程中，要注意细节和初始化部分，以及在遇到障碍物之后，需要进行什么处理等这些方面，要考虑全面。</p>
+<p><strong>ending!!!</strong></p>
+<p><img alt="2" src="../imgs/2.jpg" /></p>
 
 
 
