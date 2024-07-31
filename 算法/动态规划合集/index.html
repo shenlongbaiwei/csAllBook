@@ -439,6 +439,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数拆分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整数拆分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态规划步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -594,6 +618,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数拆分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整数拆分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态规划步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -697,12 +745,64 @@
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a><span class="p">};</span>
 </code></pre></div>
 <p>总结，总体上该问题是对前面爬楼梯问题的一个延续和变形，因此我们在计算的时候，需要进一步考虑每层楼的最小花费，因此需要用到min函数，同时我们可以根据相关条件，进行相关操作。</p>
+<h2 id="_5">整数拆分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>题目来源：</p>
+<p>本题其实是寻求一个整数的最佳拆分组合，来达到拆分后的乘积之和最大。</p>
+<h3 id="_6">动态规划步骤<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>该步骤主要是学习自carl的代码随想录的动态规划解题思路，相关内容可以自行前往：<a href="https://programmercarl.com/0343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.html#%E6%80%9D%E8%B7%AF">https://programmercarl.com/0343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.html#%E6%80%9D%E8%B7%AF</a> 本人只是出于学习目的，进行个人总结而已。</p>
+</blockquote>
+<p>1、分析找出适当的dp数组和相关定义</p>
+<p>在该题中，dp的定义很明显是，下标代表某个数，dp[i]代表某个数的拆分后的最大子数的乘积。</p>
+<p>2、确定递推公式</p>
+<p>在这个题目中dp数组的推导依赖于前面的数的dp元素。</p>
+<p>因此：</p>
+<p>dp[i]=max(dp[i],max(dp[i-j]*j,(i-j)*j))</p>
+<p>取最大值是因为，再循环遍历过程中，要找最大值，而且每一步之后当前dp[i]的值都可能会变，因此递推公式有dp[i],其次，我们进行从1-i的循环拆分遍历，所以，要不断找最大值，每一个j都存在两种情况：</p>
+<p>即，一种是当前j和i-j两个数相乘值最大，一种是当前j和i-j的最大拆分的乘积和相乘得到新的乘积和。</p>
+<p>因此上述的递推公式就如上表示。</p>
+<p>3、dp数组的初始化</p>
+<p>在题目中，</p>
+<p>dp[0]=0,dp[1]=0，这是很明显的，因此在初始化全为0的时候，都无需管理。</p>
+<p>我们需要进行有意义的计算，因此只有从dp[2]=1开始的往后计算，才会有意义且结果正确，逻辑能够通顺。</p>
+<p>初始化：dp[2]=1</p>
+<p>4、遍历顺序</p>
+<p>很明显，dp数组的遍历顺序，每一个元素都依赖于前面拆分的数的乘积和，且与他们相同，</p>
+<p>因此从前往后进行两层for循环即可。</p>
+<p>5、举例进行推导</p>
+<p>这一步就可以直接编写代码进行一些简单的测试了。</p>
+<h4 id="_7">题目代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">integerBreak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">        </span><span class="n">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">                </span><span class="c1">//找最大的乘积</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">                </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">max</span><span class="p">((</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">j</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">j</span><span class="p">));</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>代码实现比较简单，主要是代码实现的中间逻辑需要考虑清楚，不要漏项了。</p>
+<p><strong>总结：</strong></p>
+<p>在第二层循环的过程中。</p>
+<blockquote>
+<p><em>我们只遍历到i/2就停了，主要是拆分一个数n 使之乘积最大，那么一定是拆分成m个近似相同的子数相乘才是最大的。只不过我们不知道m究竟是多少而已，但可以明确的是m一定大于等于2，既然m大于等于2，也就是 最差也应该是拆成两个相同的 可能是最大值。</em>---carl</p>
+</blockquote>
+<p>所以只需要遍历到第i/2即可。</p>
+<p>整体上还需要注意dp数组的初始化部分，在初始化的时候要想好从哪开始初始化，还要看清楚dp[i]所代表的含义和下标的意义。</p>
+<p><strong>ending!</strong></p>
+<p><img alt="3" src="../imgs/3.jpg" /></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
