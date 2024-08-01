@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/">
+        <link rel="prev" href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E6%95%99%E7%A8%8B%EF%BC%9A%E9%AB%98%E9%80%9F%E4%B8%8A%E6%89%8B%E5%AD%A6%E4%B9%A0/">
       
-      
-        <link rel="next" href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>1 - DaveLyCsAllBook</title>
+        <title>2 - DaveLyCsAllBook</title>
       
     
     
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1
+              2
             
           </span>
         </div>
@@ -476,6 +474,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E6%95%99%E7%A8%8B%EF%BC%9A%E9%AB%98%E9%80%9F%E4%B8%8A%E6%89%8B%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -492,7 +511,7 @@
           
   
   <span class="md-ellipsis">
-    1
+    2
   </span>
   
 
@@ -503,7 +522,7 @@
         
   
   <span class="md-ellipsis">
-    1
+    2
   </span>
   
 
@@ -525,9 +544,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      第一章 迈向现代c++
+      语言可用性的强化
     </span>
   </a>
   
@@ -537,27 +556,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -605,9 +603,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      第一章 迈向现代c++
+      语言可用性的强化
     </span>
   </a>
   
@@ -628,83 +626,32 @@
                   
 
 
-<h1 id="c">现代c++教程：高速上手学习<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>学习来源：现代c++教程</p>
-<p>原作者：欧长坤</p>
-<p>本文只是出于学习目的，相关详细内容咨询请跳转至原作者的书籍网页：</p>
-<p><a href="https://changkun.de/modern-cpp/zh-cn/01-intro/">第 1 章 迈向现代 C++ 现代 C++ 教程: 高速上手 C++ 11/14/17/20 - Modern C++ Tutorial: C++ 11/14/17/20 On the Fly</a></p>
-</blockquote>
-<h2 id="c_1">第一章 迈向现代c++<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
-<p>在学习原文的被弃用的特性时，有一些弃用特性没接触过，有一些接触过，没接触过的就不再赘述。</p>
-<p>原文说法：</p>
-<blockquote>
-<p><strong>注意</strong>：弃用并非彻底不能用，只是用于暗示程序员这些特性将从未来的标准中消失，应该尽量避免使用。但是，已弃用的特性依然是标准库的一部分，并且出于兼容性的考虑，大部分特性其实会『永久』保留。</p>
-</blockquote>
-<p>在新版本中被弃用的语法特性，一般会在新版语言标准的更新过程中逐渐不被支持和减少使用。</p>
-<p>需要注意c语言和c++不是包含关系，他们不同版本之间是存在交集的。</p>
-<p><strong>c++不是c的一个超集。</strong></p>
-<p>在学习过程中发现了一些自己不熟悉的c++语言用法：</p>
-<p><code>std::ref std::thread *.join() *.detach()</code></p>
-<h4 id="stdref">一、std::ref<a class="headerlink" href="#stdref" title="Permanent link">&para;</a></h4>
-<p>这个语法是c++11引用的语法，主要是为了解决在函数式编程的过程中的参数传参问题。</p>
-<p>因为在一般的函数式编程或者lambda表达式的时候，默认是使用参数的拷贝构造。但是我们需要对参数进行引用，此时就需要使用std::ref来声明参数的传递类型。</p>
-<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="o">&amp;</span><span class="n">b</span><span class="p">){</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;f函数中a,b初始值：&quot;</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="o">++</span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="o">++</span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;f函数中a,b更改后的值：&quot;</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="p">}</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="n">b</span><span class="p">{</span><span class="mi">2</span><span class="p">};</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><a href="#__codelineno-0-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;f函数执行前a,b的值：&quot;</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><a href="#__codelineno-0-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fang_f</span><span class="o">=</span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><a href="#__codelineno-0-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="n">fang_f</span><span class="p">();</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><a href="#__codelineno-0-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;f函数结束后a,b的值：&quot;</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><a href="#__codelineno-0-16"><span class="linenos" data-linenos="16 "></span></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><a href="#__codelineno-0-18"><span class="linenos" data-linenos="18 "></span></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><a href="#__codelineno-0-19"><span class="linenos" data-linenos="19 "></span></a><span class="p">}</span>
-</code></pre></div>
-<p><img alt="Snipaste_2024-07-29_00-11-46" src="../imgs/Snipaste_2024-07-29_00-11-46.png" /></p>
-<h4 id="stdthread">二、std::thread<a class="headerlink" href="#stdthread" title="Permanent link">&para;</a></h4>
-<p>这个是c++的线程库的实现类，一般与并行并发相关的函数都在这个thread类中，可以找到</p>
-<p>使用方法：</p>
-<p><code>std::thread T{f,arg};</code></p>
-<p><code>T.join();</code>  or   <code>T.detach();</code></p>
-<p>一个简单的多线程的例子：</p>
-<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="cpf">&lt;thread&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#incldue&lt;iostream&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos=" 3 "></span></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_num</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><a href="#__codelineno-1-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><a href="#__codelineno-1-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">print_num</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><a href="#__codelineno-1-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="n">T</span><span class="p">.</span><span class="n">detach</span><span class="p">();</span><span class="c1">//这个函数代表启动的线程可以在后台独立运行，即每个生成的线程都相互独立，各个线程互相竞争资源。</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><a href="#__codelineno-1-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><a href="#__codelineno-1-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><a href="#__codelineno-1-13"><span class="linenos" data-linenos="13 "></span></a><span class="p">}</span>
-</code></pre></div>
-<p>执行结果是不同线程相互竞争资源，最后导致打印的结果没有按照顺序来执行。</p>
-<p>如果使用的是*.join函数的话，它的函数功能是不同线程只有当前的线程程序执行完成才会执行下一步函数，所以执行结果是按顺序的。</p>
-<p>一个简单的在线c++测试网站：</p>
-<p><a href="https://godbolt.org/">https://godbolt.org/</a></p>
-<p><strong>ending!</strong></p>
-<p><img alt="wang2" src="../imgs/wang2.jpg" /></p>
+<h1 id="c">现代c++语法学习<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<h3 id="_1">语言可用性的强化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>std::is_same</li>
+<li>nullptr与NULL</li>
+<li>decltype</li>
+<li>constexpr</li>
+<li>if/switch变量声明</li>
+<li>初始化列表构造函数</li>
+<li>
+<p>结构化绑定</p>
+</li>
+<li>
+<p>auto</p>
+</li>
+<li>decltype</li>
+<li>尾返回类型推导</li>
+<li>decltype(auto)</li>
+</ul>
+<p>decltype(auto)主要用于转发函数或封装的返回类型进行推导，这样不需要显式的指定decltype的参数表达式。</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -734,7 +681,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-footer__link md-footer__link--prev" aria-label="上一页: boost和jsoncpp库安装">
+          <a href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E6%95%99%E7%A8%8B%EF%BC%9A%E9%AB%98%E9%80%9F%E4%B8%8A%E6%89%8B%E5%AD%A6%E4%B9%A0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -744,27 +691,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                boost和jsoncpp库安装
+                1
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../%E7%8E%B0%E4%BB%A3c%2B%2B%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                2
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
