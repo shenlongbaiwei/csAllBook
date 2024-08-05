@@ -549,6 +549,72 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="用二维动态数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分割等和子集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分割等和子集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      0-1背包问题的模板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      套用模板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后一块石头的重量Ⅱ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      tips,小科普
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ending" class="md-nav__link">
+    <span class="md-ellipsis">
+      ending!!!
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -661,6 +727,72 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="用二维动态数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      分割等和子集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分割等和子集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      0-1背包问题的模板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      套用模板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后一块石头的重量Ⅱ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      tips,小科普
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ending" class="md-nav__link">
+    <span class="md-ellipsis">
+      ending!!!
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -679,6 +811,9 @@
 
 
 <h1 id="0-1">动态规划—0-1背包问题<a class="headerlink" href="#0-1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>学习代码随想录相关动态规划的总结</p>
+</blockquote>
 <h2 id="_1">用一维动态数组<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="cpf">&lt;vector&gt;</span>
@@ -758,12 +893,92 @@
 <a id="__codelineno-1-42" name="__codelineno-1-42"></a><a href="#__codelineno-1-42"><span class="linenos" data-linenos="42 "></span></a><span class="p">}</span>
 </code></pre></div>
 <p>整体思路都是要注意dp数组的初始化，含义，递推公式和递推顺序。</p>
+<hr />
+<h3 id="_3">分割等和子集<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>题目来源：</p>
+<p><a href="https://leetcode.cn/problems/partition-equal-subset-sum/description/">https://leetcode.cn/problems/partition-equal-subset-sum/description/</a></p>
+<p>思路：</p>
+<p>将本题理解成0-1背包问题，并将相关内容进行转换，套用到0-1背包问题上的解决方法上来。</p>
+<p>其实就是找到集合里面出现总和/2的子集总和，只要找到了，就说明能够分成相同的子集，反之则不能。</p>
+<h4 id="0-1_1">0-1背包问题的模板<a class="headerlink" href="#0-1_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>确定dp数组含义，dp[i]表示背包最大容量为i，且dp[i]代表当前容量的背包的物品的价值</li>
+<li>确定dp递推公式：dp[i]=max(dp[i],dp[i-weight[j]]+values[j])</li>
+<li>初始化，一般都构建一个最大容量的数量的dp数组的size，初始化为0</li>
+<li>递推顺序，二维：外层背包容量，内层遍历物品</li>
+<li>举例推导：自行推导。</li>
+</ol>
+<h4 id="_4">套用模板<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>本题很明显需要找到是否在target为sum/2的时候装满。</p>
+<ol>
+<li>dp数组，定义为一维数组，dp[i]表示，当前背包能填进去最大总和为i的数字集合的和，i表示当前能容纳的最大的数字和</li>
+<li>dp递推公式：dp[i]=max(dp[i],dp[i-cost[j]]+weight[j])，该题中，每个数字的容量和对应的价值都相同，即cost[i]=weight[i]，而当前每一步都存在取不取当前的数字，选择不取就是原来的值，选择取则是当前前面的数组dp减去要取的元素的最大和再加上当前取的元素的大小</li>
+<li>初始化：cost，weight，直接初始化为题目默认的函数的元素大小,dp数组初始化为0即可，数组大小为所有数组大小总和+1即可</li>
+<li>遍历顺序：一维数组，所以先遍历物品，再遍历背包</li>
+<li>自行举例推导</li>
+</ol>
+<p>代码：</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">bool</span><span class="w"> </span><span class="nf">canPartition</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">            </span><span class="n">sum</span><span class="o">+=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="mi">10001</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">target_1</span><span class="o">=</span><span class="n">sum</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="c1">//0-1背包循环即可</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="o">=</span><span class="n">target_1</span><span class="p">;</span><span class="n">target</span><span class="o">&gt;=</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">target</span><span class="o">--</span><span class="p">){</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">                </span><span class="n">dp</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">target</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">target</span><span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><a href="#__codelineno-2-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><a href="#__codelineno-2-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="c1">//如果存在dp[target_1]==target_1，则返回true</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><a href="#__codelineno-2-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">target_1</span><span class="o">==</span><span class="n">dp</span><span class="p">[</span><span class="n">target_1</span><span class="p">])</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><a href="#__codelineno-2-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><a href="#__codelineno-2-18"><span class="linenos" data-linenos="18 "></span></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><a href="#__codelineno-2-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="ii">最后一块石头的重量Ⅱ<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h3>
+<p>题目来源：</p>
+<p><a href="https://leetcode.cn/problems/last-stone-weight-ii/">https://leetcode.cn/problems/last-stone-weight-ii/</a></p>
+<p>思路：此题和上面题的思路相同，都是套用0-1背包理论进行推导即可。</p>
+<p>0-1模板：见上一题</p>
+<p>套用模板：与上一题相似，只不过要注意dp数组的含义，dp[i]表示容量为i的背包，最多能够背的重量为dp[i]表示。</p>
+<p>“最多可以装的价值为 dp[j]” == “最多可以背的重量为dp[j]”。</p>
+<p>其他部分都相似。</p>
+<p>其实求解最后剩余石头大小，其实就是将石头进行总重量除以二进行对称碰撞消除，最后剩余的石头大小重量，即</p>
+<p>sum-dp[target]   -   dp[target]. target=sum/2.target是向下取整， dp[target]&lt;sum/2。</p>
+<p>代码：</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">lastStoneWeightII</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">stones</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="mi">15001</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">stones</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">sum</span><span class="o">+=</span><span class="n">stones</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="o">=</span><span class="n">sum</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">        </span><span class="c1">//遍历石头</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">stones</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">            </span><span class="c1">//遍历装石头的背包</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">target</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">stones</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">j</span><span class="o">--</span><span class="p">){</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">                </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">stones</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="n">stones</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><a href="#__codelineno-3-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><a href="#__codelineno-3-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="c1">//返回结果</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><a href="#__codelineno-3-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="o">-</span><span class="n">dp</span><span class="p">[</span><span class="n">target</span><span class="p">])</span><span class="o">-</span><span class="n">dp</span><span class="p">[</span><span class="n">target</span><span class="p">];</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><a href="#__codelineno-3-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>上述部分即可得当前石头消除之后的得到的石头大小。</p>
+<h3 id="tips">tips,小科普<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<p><img alt="纸张标准" src="../imgs/%E7%BA%B8%E5%BC%A0%E6%A0%87%E5%87%86.jpg" /></p>
+<h2 id="ending">ending!!!<a class="headerlink" href="#ending" title="Permanent link">&para;</a></h2>
 
 
 
 
 
 
+
+  
+  
 
 
 
