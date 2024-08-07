@@ -578,6 +578,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      一和零
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一和零">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -835,6 +859,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      一和零
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一和零">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -935,12 +983,58 @@
 <h4 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h4>
 <p>MkDocs 是一个用于创建项目文档的静态站点生成器。文档源码使用 Markdown 来撰写，经配置后，可自动生成具有目录结构的站点，常用来撰写技术文档、个人博客。</p>
 <p><a href="https://mkdocs-like-code.readthedocs.io/zh-cn/latest/">文档开发教程</a></p>
+<h2 id="_3">一和零<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>题目来源：</p>
+<p><a href="https://leetcode.cn/problems/ones-and-zeroes/description/">https://leetcode.cn/problems/ones-and-zeroes/description/</a></p>
+<p>分析：</p>
+<p>本质其实还是一个0-1背包问题，只不过在这里每个背包都用两个坐标来表示，就是0的个数和1的个数。</p>
+<p>首先，确定dp数组,dp[i][j]表示最多能容下i个0，j个1，同时数组的元素表示当前容量下的符合条件的最多有几个子集。</p>
+<p>其实，递推顺序，和0-1背包一样，dp[i][j]需要依赖于前面的背包的内容，dp[i][j]=max(dp[i][j],dp[i-znum][j-onum]+1);</p>
+<p>接着，初始化，在该题目中，我们可以知道每个元素都依赖于前面的元素，因此初始化每个元素初始为0即可。在(0,0)位置的元素表示，刚开始能容纳0个0和0个1的时候的子集个数，很明显是0.</p>
+<p>其次，遍历顺序，虽然表面是一个二维数组，但是实际上还是一个一维数组，所以我们使用外层for遍历每个str，内层遍历每个不同容量大小的背包即可。</p>
+<p>总之，进行自行举例推导验证。</p>
+<p>代码：</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">findMaxForm</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">strs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">        </span><span class="c1">//初始化dp数组</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">        </span><span class="c1">//遍历strs</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="o">:</span><span class="n">strs</span><span class="p">){</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">znum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">onum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="o">:</span><span class="n">str</span><span class="p">){</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">znum</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="n">onum</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">znum</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">onum</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">                    </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">znum</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="n">onum</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><a href="#__codelineno-2-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><a href="#__codelineno-2-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><a href="#__codelineno-2-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><a href="#__codelineno-2-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="p">][</span><span class="n">n</span><span class="p">];</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><a href="#__codelineno-2-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="_4">总结：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>0-1背包的多种应用：</p>
+<ul>
+<li><a href="https://programmercarl.com/背包理论基础01背包-2.html">纯 0 - 1 背包 (opens new window)</a>是求 给定背包容量 装满背包 的最大价值是多少。</li>
+<li><a href="https://programmercarl.com/0416.分割等和子集.html">416. 分割等和子集 (opens new window)</a>是求 给定背包容量，能不能装满这个背包。</li>
+<li><a href="https://programmercarl.com/1049.最后一块石头的重量II.html">1049. 最后一块石头的重量 II (opens new window)</a>是求 给定背包容量，尽可能装，最多能装多少</li>
+<li><a href="https://programmercarl.com/0494.目标和.html">494. 目标和 (opens new window)</a>是求 给定背包容量，装满背包有多少种方法。</li>
+<li>本题是求 给定背包容量，装满背包最多有多少个物品。</li>
+</ul>
+</blockquote>
+<p>上述总结部分引用自代码随想录，仅用于个人学习总结。</p>
+<p><img alt="背包" src="../imgs/%E8%83%8C%E5%8C%85.jpg" /></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
