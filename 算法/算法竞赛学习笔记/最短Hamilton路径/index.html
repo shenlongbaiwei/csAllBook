@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/">
+        <link rel="prev" href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98/">
       
       
-        <link rel="next" href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/">
+        <link rel="next" href="../../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>动态周总结 - DaveLyCsAllBook</title>
+        <title>最短Hamilton路径（状态压缩dp） - DaveLyCsAllBook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#hamilton" class="md-skip">
           跳转至
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="DaveLyCsAllBook" class="md-header__button md-logo" aria-label="DaveLyCsAllBook" data-md-component="logo">
+    <a href="../../.." title="DaveLyCsAllBook" class="md-header__button md-logo" aria-label="DaveLyCsAllBook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              动态周总结
+              最短Hamilton路径（状态压缩dp）
             
           </span>
         </div>
@@ -210,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -229,7 +229,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E6%AF%8F%E5%91%A8%E5%B0%8F%E8%AE%A1/20240911/" class="md-tabs__link">
+        <a href="../../../%E6%AF%8F%E5%91%A8%E5%B0%8F%E8%AE%A1/20240911/" class="md-tabs__link">
           
   
   每周小计
@@ -257,7 +257,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="md-tabs__link">
+        <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="md-tabs__link">
           
   
   算法
@@ -278,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-tabs__link">
+        <a href="../../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-tabs__link">
           
   
   c++
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%89%88%E6%9C%AC1%EF%BC%89/" class="md-tabs__link">
+        <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%89%88%E6%9C%AC1%EF%BC%89/" class="md-tabs__link">
           
   
   数据库
@@ -338,7 +338,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="DaveLyCsAllBook" class="md-nav__button md-logo" aria-label="DaveLyCsAllBook" data-md-component="logo">
+    <a href="../../.." title="DaveLyCsAllBook" class="md-nav__button md-logo" aria-label="DaveLyCsAllBook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
@@ -356,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +394,7 @@
         
   
   
-    <a href="../../%E6%AF%8F%E5%91%A8%E5%B0%8F%E8%AE%A1/20240911/" class="md-nav__link">
+    <a href="../../../%E6%AF%8F%E5%91%A8%E5%B0%8F%E8%AE%A1/20240911/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -464,8 +464,6 @@
                 
   
   
-    
-  
   
   
     
@@ -482,11 +480,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
@@ -500,7 +500,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             动态规划
@@ -514,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="md-nav__link">
+      <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,19 +532,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%80%81%E5%91%A8%E6%80%BB%E7%BB%93/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +544,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -566,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" class="md-nav__link">
+      <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E2%80%940-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E2%80%940-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AC%AC%E5%9B%9B%E5%91%A8/" class="md-nav__link">
+      <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AC%AC%E5%9B%9B%E5%91%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E7%B3%BB%E5%88%97/" class="md-nav__link">
+      <a href="../../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E7%B3%BB%E5%88%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8/" class="md-nav__link">
+      <a href="../../%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%BA%8F%E5%88%97%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../%E5%BA%8F%E5%88%97%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%28%E9%99%84%E5%B8%A6%E9%83%A8%E5%88%86%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98%29/" class="md-nav__link">
+      <a href="../../%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%28%E9%99%84%E5%B8%A6%E9%83%A8%E5%88%86%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" class="md-nav__link">
+      <a href="../../%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%88%E9%83%A8%E5%88%86%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%BE%E8%AE%BA%EF%BC%88%E7%AE%80%E5%8D%95%E5%B0%8F%E7%BB%93%EF%BC%89/" class="md-nav__link">
+      <a href="../../%E5%9B%BE%E8%AE%BA%EF%BC%88%E7%AE%80%E5%8D%95%E5%B0%8F%E7%BB%93%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%BE%E8%AE%BA%EF%BC%88%E4%BA%8C%EF%BC%89/" class="md-nav__link">
+      <a href="../../%E5%9B%BE%E8%AE%BA%EF%BC%88%E4%BA%8C%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%BE%E8%AE%BA%EF%BC%88%E4%B8%89%EF%BC%89/" class="md-nav__link">
+      <a href="../../%E5%9B%BE%E8%AE%BA%EF%BC%88%E4%B8%89%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -852,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%BE%E8%AE%BA%EF%BC%884%EF%BC%89/" class="md-nav__link">
+      <a href="../../%E5%9B%BE%E8%AE%BA%EF%BC%884%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" class="md-nav__link">
+      <a href="../../%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+      <a href="../../%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-%E6%95%B0%E7%8B%AC%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-%E6%95%B0%E7%8B%AC%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-%E9%87%8D%E6%96%B0%E5%AE%89%E6%8E%92%E8%A1%8C%E7%A8%8B/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-%E9%87%8D%E6%96%B0%E5%AE%89%E6%8E%92%E8%A1%8C%E7%A8%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-n%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9E%E6%BA%AF%EF%BC%89-n%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E3%80%90%E6%89%93%E5%9F%BA%E7%A1%80%E3%80%91/" class="md-nav__link">
+      <a href="../../%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E3%80%90%E6%89%93%E5%9F%BA%E7%A1%80%E3%80%91/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1059,8 +1049,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1075,13 +1067,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -1095,7 +1085,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             算法竞赛
@@ -1109,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1127,10 +1117,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    最短Hamilton路径（状态压缩dp）
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1139,6 +1149,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      输出格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1184,7 +1241,7 @@
         
   
   
-    <a href="../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-nav__link">
+    <a href="../../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1231,7 +1288,7 @@
     
   
   
-    <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%89%88%E6%9C%AC1%EF%BC%89/" class="md-nav__link">
+    <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%89%88%E6%9C%AC1%EF%BC%89/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1272,6 +1329,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      输出格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1285,33 +1377,78 @@
                   
 
 
-<h1 id="_1">动态周总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>动态规划五部曲：</p>
-<p>1、确定dp数组以及下标的含义。</p>
-<p>2、确定递推公式</p>
-<p>3、dp数组如何初始化</p>
-<p>4、确定遍历顺序</p>
-<p>5、举例进行推导dp数组</p>
-<p>我们要注意在学习动态规划算法的时候，注重递推公式的推导和dp数组初始化问题。</p>
-<p><strong>如果代码写出来了，一直ac不了的话，就需要注意：</strong></p>
-<p>1、状态转移公式对了不？</p>
-<p>2、dp数组规划的内容是正确的吗？</p>
-<p>本周主要做了：斐波那契数列，爬楼梯，使用最小花费爬楼梯。</p>
-<p>这三个算法的递推公式，都是类似于dp[i]=dp[i-1]+dp[i-2]等等。</p>
-<p>而且这三个题目的递推顺序都是从前往后。</p>
-<p>我们要注意这三个算法的初始化数组！</p>
-<p>特别是楼梯的第一级花费，要额外注意题目要求。</p>
-<p>总体上这三个算法的难度不大。</p>
-<p><img alt="images" src="../imgs/images.jpg" /></p>
+<h1 id="hamilton">最短Hamilton路径<a class="headerlink" href="#hamilton" title="Permanent link">&para;</a></h1>
+<p>题目来源：<a href="https://www.acwing.com/problem/content/93/">https://www.acwing.com/problem/content/93/</a></p>
+<p>题目简单描述：</p>
+<p>给定一张 n 个点的带权无向图，点从0∼n−1 标号，求起点 0 到终点 n−1 的最短 Hamilton 路径。</p>
+<p>Hamilton 路径的定义是从 0 到 n−1 不重不漏地经过每个点恰好一次。</p>
+<h4 id="_1">输入格式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>第一行输入整数 n。</p>
+<p>接下来 n 行每行 n 个整数，其中第 i 行第 j 个整数表示点 i 到 j 的距离（记为 a[i,j]）。</p>
+<p>对于任意的 x,y,z，数据保证 a[x,x]=0，a[x,y]=a[y,x] 并且 a[x,y]+a[y,z]≥a[x,z]</p>
+<h4 id="_2">输出格式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>输出一个整数，表示最短 Hamilton 路径的长度。</p>
+<h3 id="_3">思路<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>使用状态DP来解决，用空间来换时间</p>
+<p>我们假设有n个点，那么0-n-1的路径我们用二进制位来表示，我们用n位二进制来表示，当1&lt;&lt;n-1的时候我们才能算是找到了一条路径，同时我们必须保证路径长度是最小值。</p>
+<p>那么我们怎么保证路径长度是最小值呢？</p>
+<p>我们需要dp动态规划来进行递推。</p>
+<p>我们定义一个dp数组，dp数组的含义是，dp[i][j]表示路径为i的时候，到达目的地j的最短路径长度。</p>
+<p>递推公式：</p>
+<p>dp[i][j]=min(dp[i][j],dp[i-(1&lt;&lt;j)][k]+w[k][j]);</p>
+<p>dp[i-(1&lt;&lt;j)][k]表示当前的dp数组最短路径还没走到j，所以我们需要再路径中i中删掉j之后的最短以k为终点的最短路径长度。</p>
+<p>因此我们才会需要dp[i-(1&lt;<j)][k]的最短路径长度加上k->j的路径长度才算是最短路径长度。</p>
+<p>遍历方法：</p>
+<p>我们需要进行两重遍历，i是外层遍历，表示所有的路径情况，j是内层遍历，表示i当前的情况下，以j为终点的最短路径。注意是无向的，所以我们才能这样表示路径，因为无向的边，无论怎么排列只要能走就行，只看最后的结果。在内层遍历的时候我们需要对k进行遍历，k的取值范围是0-&gt;n。</p>
+<p>初始化数组：在这里我们要注意，每个元素都依赖于前面的元素，所以我们需要对第一个元素初始化，f[0][0]=0;</p>
+<p>代码：</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="cp">#include</span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">M</span><span class="o">=</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">N</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="n">N</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="n">N</span><span class="p">][</span><span class="n">N</span><span class="p">];</span><span class="c1">//w表示的是无权图</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="c1">//read data</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><a href="#__codelineno-0-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><a href="#__codelineno-0-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><a href="#__codelineno-0-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><a href="#__codelineno-0-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">            </span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><a href="#__codelineno-0-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><a href="#__codelineno-0-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="c1">//初始化f数组每个元素为最大值</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><a href="#__codelineno-0-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mh">0x3f</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">f</span><span class="p">));</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><a href="#__codelineno-0-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="c1">//初始化f</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><a href="#__codelineno-0-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">    </span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><a href="#__codelineno-0-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">    </span><span class="c1">//函数体核心</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><a href="#__codelineno-0-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="mi">-1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><a href="#__codelineno-0-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><a href="#__codelineno-0-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="n">j</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">){</span><span class="c1">//当前第j位是否走到了，如果为1，表示走到了才算</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><a href="#__codelineno-0-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><a href="#__codelineno-0-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="c1">//判断当前如果以k为终点，是否第k位走到了</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><a href="#__codelineno-0-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">                    </span><span class="p">{</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><a href="#__codelineno-0-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">                        </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">j</span><span class="p">)][</span><span class="n">k</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><a href="#__codelineno-0-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><a href="#__codelineno-0-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><a href="#__codelineno-0-32"><span class="linenos" data-linenos="32 "></span></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><a href="#__codelineno-0-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><a href="#__codelineno-0-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><a href="#__codelineno-0-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><a href="#__codelineno-0-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">f</span><span class="p">[(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">)</span><span class="mi">-1</span><span class="p">][</span><span class="n">n</span><span class="mi">-1</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><a href="#__codelineno-0-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><a href="#__codelineno-0-38"><span class="linenos" data-linenos="38 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>上述代码就是答案，我们要注意到这里运用了位运算，同时我们用二进制的每一位来表示路径。</p>
+<p>tips:要注意位运算的优先级很低，很多情况下我们尽量加小括号，同时我们要注意不同的位运算之间的优先级是按照符号执行顺序，我在计算的时候就被负号坑了，进行左移运算的时候减了一，忘记加小括号，导致错误。</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -1341,7 +1478,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%90%88%E9%9B%86/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 动态小总结">
+          <a href="../%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 约瑟夫问题">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1351,20 +1488,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                动态小总结
+                约瑟夫问题
               </div>
             </div>
           </a>
         
         
           
-          <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" class="md-footer__link md-footer__link--next" aria-label="下一页: 动态规划-不同路径">
+          <a href="../../../c%2B%2B/c%2B%2B%E7%9A%84boost%E5%BA%93%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84json%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%BA%93/" class="md-footer__link md-footer__link--next" aria-label="下一页: boost和jsoncpp库安装">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                动态规划-不同路径
+                boost和jsoncpp库安装
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1413,10 +1550,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
